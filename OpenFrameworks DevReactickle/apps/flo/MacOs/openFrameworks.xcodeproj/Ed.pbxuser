@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	640602F40FF52454005320F4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E446641E0F5B1CFD005D0BF0 /* ofBaseApp.h */;
+		name = "ofBaseApp.h: 25";
+		rLen = 0;
+		rLoc = 410;
+		rType = 0;
+		vrLen = 885;
+		vrLoc = 0;
+	};
+	640602F90FF52454005320F4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E446641E0F5B1CFD005D0BF0 /* ofBaseApp.h */;
+		name = "ofBaseApp.h: 25";
+		rLen = 0;
+		rLoc = 410;
+		rType = 0;
+		vrLen = 885;
+		vrLoc = 0;
+	};
+	640602FB0FF52454005320F4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 64669D1C0FD56A3200F898F8 /* main.cpp */;
+		name = "main.cpp: 10";
+		rLen = 0;
+		rLoc = 173;
+		rType = 0;
+		vrLen = 377;
+		vrLoc = 0;
+	};
+	646444DF1010EAE5009385D8 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/Ed/Documents/Reactickles/of_preRelease_v0.06_iphone/apps/flo/MacOs/openFrameworks-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	64669CDA0FD566BE00F898F8 /* openFrameworks */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = openFrameworks;
+		savedGlobals = {
+		};
+		sourceDirectories = (
+		);
+		variableFormatDictionary = {
+		};
+	};
+	64669CF70FD566D700F898F8 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryName = reactickles;
+		};
+	};
+	64669CF80FD566D700F898F8 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	64669CFF0FD5686B00F898F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E45BE0A10E8CC676009D7055 /* ft2build.h */;
+		name = "ft2build.h: 34";
+		rLen = 38;
+		rLoc = 2097;
+		rType = 0;
+		vrLen = 1327;
+		vrLoc = 858;
+	};
+	64669D020FD5686B00F898F8 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E45BE0A10E8CC676009D7055 /* ft2build.h */;
+		name = "ft2build.h: 34";
+		rLen = 38;
+		rLoc = 2097;
+		rType = 0;
+		vrLen = 1327;
+		vrLoc = 858;
+	};
+	64669D1A0FD56A3200F898F8 /* flo.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {570, 784}}";
+			sepNavSelRange = "{122, 0}";
+			sepNavVisRange = "{0, 1221}";
+		};
+	};
+	64669D1B0FD56A3200F898F8 /* flo.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {564, 1694}}";
+			sepNavSelRange = "{624, 0}";
+			sepNavVisRange = "{0, 1348}";
+			sepNavWindowFrame = "{{15, 145}, {1158, 878}}";
+		};
+	};
+	64669D1C0FD56A3200F898F8 /* main.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {600, 718}}";
+			sepNavSelRange = "{173, 0}";
+			sepNavVisRange = "{0, 377}";
+			sepNavWindowFrame = "{{38, 124}, {1158, 878}}";
+		};
+	};
+	64C872BD1004D99B003AFEAF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 64669D1A0FD56A3200F898F8 /* flo.h */;
+		name = "flo.h: 8";
+		rLen = 0;
+		rLoc = 122;
+		rType = 0;
+		vrLen = 1221;
+		vrLoc = 0;
+	};
+	64C872C01004D99B003AFEAF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 64669D1A0FD56A3200F898F8 /* flo.h */;
+		name = "flo.h: 8";
+		rLen = 0;
+		rLoc = 122;
+		rType = 0;
+		vrLen = 1221;
+		vrLoc = 0;
+	};
+	64C872E11004DB5E003AFEAF /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 64669D1C0FD56A3200F898F8 /* main.cpp */;
+		name = "main.cpp: 10";
+		rLen = 0;
+		rLoc = 173;
+		rType = 0;
+		vrLen = 377;
+		vrLoc = 0;
+	};
+	64DAE5BB1010DDA00023878E /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/Ed/Documents/Reactickles/of_preRelease_v0.06_iphone/apps/flo/MacOs/openFrameworks-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	E446641E0F5B1CFD005D0BF0 /* ofBaseApp.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {564, 718}}";
+			sepNavSelRange = "{410, 0}";
+			sepNavVisRange = "{0, 885}";
+		};
+	};
+	E44664340F5B1CFD005D0BF0 /* ofMain.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1099, 750}}";
+			sepNavSelRange = "{213, 16}";
+			sepNavVisRange = "{0, 871}";
+			sepNavWindowFrame = "{{61, 103}, {1158, 878}}";
+		};
+	};
+	E45BE0A10E8CC676009D7055 /* ft2build.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {474, 560}}";
+			sepNavSelRange = "{2097, 38}";
+			sepNavVisRange = "{1874, 311}";
+		};
+	};
+	E4B69B4C0A3A1720003C02F2 /* Project object */ = {
+		activeBuildConfigurationName = Release;
+		activeExecutable = 64669CDA0FD566BE00F898F8 /* openFrameworks */;
+		activeTarget = E4B69B5A0A3A1756003C02F2 /* openFrameworks */;
+		addToTargets = (
+			E4B69B5A0A3A1756003C02F2 /* openFrameworks */,
+		);
+		codeSenseManager = 64669CF80FD566D700F898F8 /* Code sense */;
+		executables = (
+			64669CDA0FD566BE00F898F8 /* openFrameworks */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXBookmarksDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBookmarksDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					200,
+					196,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBookmarksDataSource_LocationID,
+					PBXBookmarksDataSource_NameID,
+					PBXBookmarksDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = 1;
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_SCM_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					362,
+					20,
+					48,
+					43,
+					43,
+					20,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+					PBXFileDataSource_SCM_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.XCSCMDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					362,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_SCM_ColumnID,
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					346,
+					60,
+					20,
+					48.16259765625,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 269544145;
+			PBXWorkspaceStateSaveDate = 269544145;
+		};
+		perUserProjectItems = {
+			640602F40FF52454005320F4 /* PBXTextBookmark */ = 640602F40FF52454005320F4 /* PBXTextBookmark */;
+			640602F90FF52454005320F4 /* PBXTextBookmark */ = 640602F90FF52454005320F4 /* PBXTextBookmark */;
+			640602FB0FF52454005320F4 /* PBXTextBookmark */ = 640602FB0FF52454005320F4 /* PBXTextBookmark */;
+			646444DF1010EAE5009385D8 /* PlistBookmark */ = 646444DF1010EAE5009385D8 /* PlistBookmark */;
+			64669CFF0FD5686B00F898F8 /* PBXTextBookmark */ = 64669CFF0FD5686B00F898F8 /* PBXTextBookmark */;
+			64669D020FD5686B00F898F8 /* PBXTextBookmark */ = 64669D020FD5686B00F898F8 /* PBXTextBookmark */;
+			64C872BD1004D99B003AFEAF /* PBXTextBookmark */ = 64C872BD1004D99B003AFEAF /* PBXTextBookmark */;
+			64C872C01004D99B003AFEAF /* PBXTextBookmark */ = 64C872C01004D99B003AFEAF /* PBXTextBookmark */;
+			64C872E11004DB5E003AFEAF /* PBXTextBookmark */ = 64C872E11004DB5E003AFEAF /* PBXTextBookmark */;
+			64DAE5BB1010DDA00023878E /* PlistBookmark */ = 64DAE5BB1010DDA00023878E /* PlistBookmark */;
+		};
+		sourceControlManager = 64669CF70FD566D700F898F8 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	E4B69B5A0A3A1756003C02F2 /* openFrameworks */ = {
+		activeExec = 0;
+		executables = (
+			64669CDA0FD566BE00F898F8 /* openFrameworks */,
+		);
+	};
+}
