@@ -20,27 +20,6 @@
 		vrLen = 885;
 		vrLoc = 0;
 	};
-	640602FB0FF52454005320F4 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 64669D1C0FD56A3200F898F8 /* main.cpp */;
-		name = "main.cpp: 10";
-		rLen = 0;
-		rLoc = 173;
-		rType = 0;
-		vrLen = 377;
-		vrLoc = 0;
-	};
-	646444DF1010EAE5009385D8 /* PlistBookmark */ = {
-		isa = PlistBookmark;
-		fRef = E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */;
-		fallbackIsa = PBXBookmark;
-		isK = 0;
-		kPath = (
-		);
-		name = "/Users/Ed/Documents/Reactickles/of_preRelease_v0.06_iphone/apps/flo/MacOs/openFrameworks-Info.plist";
-		rLen = 0;
-		rLoc = 2147483647;
-	};
 	64669CDA0FD566BE00F898F8 /* openFrameworks */ = {
 		isa = PBXExecutable;
 		activeArgIndices = (
@@ -103,65 +82,46 @@
 	};
 	64669D1A0FD56A3200F898F8 /* flo.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {570, 784}}";
-			sepNavSelRange = "{122, 0}";
-			sepNavVisRange = "{0, 1221}";
+			sepNavIntBoundsRect = "{{0, 0}, {570, 728}}";
+			sepNavSelRange = "{1029, 0}";
+			sepNavVisRange = "{0, 1157}";
 		};
 	};
 	64669D1B0FD56A3200F898F8 /* flo.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {564, 1694}}";
-			sepNavSelRange = "{624, 0}";
-			sepNavVisRange = "{0, 1348}";
+			sepNavIntBoundsRect = "{{0, 0}, {564, 1708}}";
+			sepNavSelRange = "{2410, 0}";
+			sepNavVisRange = "{1769, 1379}";
 			sepNavWindowFrame = "{{15, 145}, {1158, 878}}";
 		};
 	};
 	64669D1C0FD56A3200F898F8 /* main.cpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {600, 718}}";
-			sepNavSelRange = "{173, 0}";
-			sepNavVisRange = "{0, 377}";
+			sepNavSelRange = "{117, 0}";
+			sepNavVisRange = "{0, 374}";
 			sepNavWindowFrame = "{{38, 124}, {1158, 878}}";
 		};
 	};
-	64C872BD1004D99B003AFEAF /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 64669D1A0FD56A3200F898F8 /* flo.h */;
-		name = "flo.h: 8";
-		rLen = 0;
-		rLoc = 122;
-		rType = 0;
-		vrLen = 1221;
-		vrLoc = 0;
-	};
-	64C872C01004D99B003AFEAF /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 64669D1A0FD56A3200F898F8 /* flo.h */;
-		name = "flo.h: 8";
-		rLen = 0;
-		rLoc = 122;
-		rType = 0;
-		vrLen = 1221;
-		vrLoc = 0;
-	};
-	64C872E11004DB5E003AFEAF /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 64669D1C0FD56A3200F898F8 /* main.cpp */;
-		name = "main.cpp: 10";
-		rLen = 0;
-		rLoc = 173;
-		rType = 0;
-		vrLen = 377;
-		vrLoc = 0;
-	};
-	64DAE5BB1010DDA00023878E /* PlistBookmark */ = {
+	64A7724B1015F3A700C8D440 /* PlistBookmark */ = {
 		isa = PlistBookmark;
 		fRef = E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */;
 		fallbackIsa = PBXBookmark;
 		isK = 0;
 		kPath = (
 		);
-		name = "/Users/Ed/Documents/Reactickles/of_preRelease_v0.06_iphone/apps/flo/MacOs/openFrameworks-Info.plist";
+		name = "/Users/Ed/Documents/Reactickles/reactickles/OpenFrameworks DevReactickle/apps/flo/MacOs/openFrameworks-Info.plist";
+		rLen = 0;
+		rLoc = 2147483647;
+	};
+	64A7724C1015F3A700C8D440 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/Ed/Documents/Reactickles/reactickles/OpenFrameworks DevReactickle/apps/flo/MacOs/openFrameworks-Info.plist";
 		rLen = 0;
 		rLoc = 2147483647;
 	};
@@ -283,20 +243,16 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 269544145;
-			PBXWorkspaceStateSaveDate = 269544145;
+			PBXPerProjectTemplateStateSaveDate = 269873547;
+			PBXWorkspaceStateSaveDate = 269873547;
 		};
 		perUserProjectItems = {
 			640602F40FF52454005320F4 /* PBXTextBookmark */ = 640602F40FF52454005320F4 /* PBXTextBookmark */;
 			640602F90FF52454005320F4 /* PBXTextBookmark */ = 640602F90FF52454005320F4 /* PBXTextBookmark */;
-			640602FB0FF52454005320F4 /* PBXTextBookmark */ = 640602FB0FF52454005320F4 /* PBXTextBookmark */;
-			646444DF1010EAE5009385D8 /* PlistBookmark */ = 646444DF1010EAE5009385D8 /* PlistBookmark */;
 			64669CFF0FD5686B00F898F8 /* PBXTextBookmark */ = 64669CFF0FD5686B00F898F8 /* PBXTextBookmark */;
 			64669D020FD5686B00F898F8 /* PBXTextBookmark */ = 64669D020FD5686B00F898F8 /* PBXTextBookmark */;
-			64C872BD1004D99B003AFEAF /* PBXTextBookmark */ = 64C872BD1004D99B003AFEAF /* PBXTextBookmark */;
-			64C872C01004D99B003AFEAF /* PBXTextBookmark */ = 64C872C01004D99B003AFEAF /* PBXTextBookmark */;
-			64C872E11004DB5E003AFEAF /* PBXTextBookmark */ = 64C872E11004DB5E003AFEAF /* PBXTextBookmark */;
-			64DAE5BB1010DDA00023878E /* PlistBookmark */ = 64DAE5BB1010DDA00023878E /* PlistBookmark */;
+			64A7724B1015F3A700C8D440 /* PlistBookmark */ = 64A7724B1015F3A700C8D440 /* PlistBookmark */;
+			64A7724C1015F3A700C8D440 /* PlistBookmark */ = 64A7724C1015F3A700C8D440 /* PlistBookmark */;
 		};
 		sourceControlManager = 64669CF70FD566D700F898F8 /* Source Control */;
 		userBuildSettings = {

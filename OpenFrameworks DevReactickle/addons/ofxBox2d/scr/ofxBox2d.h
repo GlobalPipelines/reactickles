@@ -12,6 +12,7 @@
 #include "ofxBox2dJoint.h"
 #include "ofxBox2dRender.h"
 
+
 class ofxBox2d {
 	
 private:

@@ -4,7 +4,7 @@
 int main(int argc, char *argv[]) {
 	int w=1024;
 	int h=768;
-	int mode=OF_GAME_MODE;
+	int mode=OF_WINDOW;
 #ifdef TARGET_OS_IPHONE
 	mode=OF_FULLSCREEN;
 #endif

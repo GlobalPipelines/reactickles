@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		64669D1E0FD56A3200F898F8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64669D1C0FD56A3200F898F8 /* main.cpp */; };
+		64A771E21015E96A00C8D440 /* changelog.txt in Resources */ = {isa = PBXBuildFile; fileRef = 64A771DC1015E96A00C8D440 /* changelog.txt */; };
+		64A771E31015E96A00C8D440 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 64A771DD1015E96A00C8D440 /* LICENSE.txt */; };
+		64A771E41015E96A00C8D440 /* ofxMultiTouch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64A771DF1015E96A00C8D440 /* ofxMultiTouch.cpp */; };
 		64DAE5CD1010DDED0023878E /* box.mm in Sources */ = {isa = PBXBuildFile; fileRef = 64DAE5CC1010DDED0023878E /* box.mm */; };
 		64DAE7131010DE550023878E /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64DAE6B11010DE550023878E /* b2BroadPhase.cpp */; };
 		64DAE7141010DE550023878E /* b2CollideCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64DAE6B31010DE550023878E /* b2CollideCircle.cpp */; };
@@ -94,6 +97,11 @@
 
 /* Begin PBXFileReference section */
 		64669D1C0FD56A3200F898F8 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		64A771DC1015E96A00C8D440 /* changelog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = changelog.txt; sourceTree = "<group>"; };
+		64A771DD1015E96A00C8D440 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		64A771DF1015E96A00C8D440 /* ofxMultiTouch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxMultiTouch.cpp; sourceTree = "<group>"; };
+		64A771E01015E96A00C8D440 /* ofxMultiTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxMultiTouch.h; sourceTree = "<group>"; };
+		64A771E11015E96A00C8D440 /* ofxMultiTouchListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxMultiTouchListener.h; sourceTree = "<group>"; };
 		64DAE5CB1010DDED0023878E /* box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = box.h; sourceTree = "<group>"; };
 		64DAE5CC1010DDED0023878E /* box.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = box.mm; sourceTree = "<group>"; };
 		64DAE6A41010DE550023878E /* ofMatrix3x3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofMatrix3x3.h; sourceTree = "<group>"; };
@@ -393,9 +401,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64A771DB1015E96A00C8D440 /* ofxMultiTouch */ = {
+			isa = PBXGroup;
+			children = (
+				64A771DC1015E96A00C8D440 /* changelog.txt */,
+				64A771DD1015E96A00C8D440 /* LICENSE.txt */,
+				64A771DE1015E96A00C8D440 /* src */,
+			);
+			name = ofxMultiTouch;
+			path = ../../../addons/ofxMultiTouch;
+			sourceTree = SOURCE_ROOT;
+		};
+		64A771DE1015E96A00C8D440 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				64A771DF1015E96A00C8D440 /* ofxMultiTouch.cpp */,
+				64A771E01015E96A00C8D440 /* ofxMultiTouch.h */,
+				64A771E11015E96A00C8D440 /* ofxMultiTouchListener.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		64DAE6A21010DE370023878E /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				64A771DB1015E96A00C8D440 /* ofxMultiTouch */,
 				64DAE6A31010DE550023878E /* ofVectorMath */,
 				64DAE6A91010DE550023878E /* ofxBox2d */,
 			);
@@ -1153,6 +1183,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4B6FCAE0C3E899E008CF71C /* openFrameworks-Info.plist in Resources */,
+				64A771E21015E96A00C8D440 /* changelog.txt in Resources */,
+				64A771E31015E96A00C8D440 /* LICENSE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1241,6 +1273,7 @@
 				64DAE73A1010DE550023878E /* b2PulleyJoint.cpp in Sources */,
 				64DAE73B1010DE550023878E /* b2RevoluteJoint.cpp in Sources */,
 				64DAE73C1010DE550023878E /* ofxBox2d.cpp in Sources */,
+				64A771E41015E96A00C8D440 /* ofxMultiTouch.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

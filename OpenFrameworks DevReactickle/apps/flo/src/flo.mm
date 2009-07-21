@@ -77,13 +77,13 @@ void flo::mouseMoved(int x, int y ){
 
 //--------------------------------------------------------------
 void flo::mouseDragged(int x, int y, int button){
-	addPointAt(x,y);
+	touchMoved(x,y,0,NULL);
 }
 
 
 //--------------------------------------------------------------
 void flo::mousePressed(int x, int y, int button){
-	addPointAt(x,y);
+	touchDown(x,y,0,NULL);
 }
 
 //--------------------------------------------------------------
@@ -94,7 +94,8 @@ void flo::mouseReleased(){
 void flo::mouseReleased(int x, int y, int button){
 	
 }
-#else
+#endif
+
 //--------------------------------------------------------------
 void flo::touchDown(float x, float y, int touchId, ofxMultiTouchCustomData *data){
 	addPointAt(x,y);
@@ -111,7 +112,7 @@ void flo::touchUp(float x, float y, int touchId, ofxMultiTouchCustomData *data){
 void flo::touchDoubleTap(float x, float y, int touchId, ofxMultiTouchCustomData *data){
 	points.clear();
 }
-#endif
+
 
 timedPoint::timedPoint(float xx,float yy, float tt){
 	x=xx;

@@ -70,7 +70,7 @@ void box::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void box::mousePressed(int x, int y, int button){
-	
+	touchDown(x,y,0);
 }
 
 //--------------------------------------------------------------
@@ -82,11 +82,16 @@ void box::mouseReleased(int x, int y, int button){
 	
 }
 
-#else
+#endif
 
 //--------------------------------------------------------------
 void box::touchDown(float x, float y, int touchId, ofxMultiTouchCustomData *data){
-	
+	float w = 3;	
+	float h = 3;	
+	ofxBox2dRect rect;
+	rect.setPhysics(3.0, 0.53, 0.1);
+	rect.setup(box2d.getWorld(), x, y, w, h);
+	boxes.push_back(rect);
 }
 //--------------------------------------------------------------
 void box::touchMoved(float x, float y, int touchId, ofxMultiTouchCustomData *data){
@@ -100,4 +105,4 @@ void box::touchUp(float x, float y, int touchId, ofxMultiTouchCustomData *data){
 void box::touchDoubleTap(float x, float y, int touchId, ofxMultiTouchCustomData *data){
 	
 }
-#endif
+

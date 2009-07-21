@@ -4,15 +4,9 @@
 
 #ifdef TARGET_OS_IPHONE
 #include "ofxAccelerometer.h"
-#include "ofxMultiTouch.h"
 #endif
 
-#ifndef TARGET_OS_IPHONE
-class ofxMultiTouchListener {
-public:
-	ofxMultiTouchListener(){};
-};
-#endif
+#include "ofxMultiTouch.h"
 
 class timedPoint{
 public:
@@ -38,12 +32,13 @@ public:
 	void mousePressed(int x, int y, int button);
 	void mouseReleased();
 	void mouseReleased(int x, int y, int button );
-#else
+#endif
+	
 	void touchDown(float x, float y, int touchId, ofxMultiTouchCustomData *data = NULL);
 	void touchMoved(float x, float y, int touchId, ofxMultiTouchCustomData *data = NULL);
 	void touchUp(float x, float y, int touchId, ofxMultiTouchCustomData *data = NULL);
 	void touchDoubleTap(float x, float y, int touchId, ofxMultiTouchCustomData *data = NULL);
-#endif
+	
 	void addPointAt(int x,int y);
 	
 	vector<timedPoint> points;
