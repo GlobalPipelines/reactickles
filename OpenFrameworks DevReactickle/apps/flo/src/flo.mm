@@ -77,13 +77,13 @@ void flo::mouseMoved(int x, int y ){
 
 //--------------------------------------------------------------
 void flo::mouseDragged(int x, int y, int button){
-	touchMoved(x,y,0,NULL);
+	touchMoved(x,y,0);
 }
 
 
 //--------------------------------------------------------------
 void flo::mousePressed(int x, int y, int button){
-	touchDown(x,y,0,NULL);
+	touchDown(x,y,0);
 }
 
 //--------------------------------------------------------------

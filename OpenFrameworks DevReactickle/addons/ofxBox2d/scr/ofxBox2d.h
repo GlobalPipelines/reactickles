@@ -34,7 +34,7 @@ public:
 	b2BodyDef		bd;
 	
 	b2Body*				m_bomb;
-	b2MouseJoint*		mouseJoint;
+	//b2MouseJoint*		mouseJoint;
 	b2Body*				ground;
 	b2Body*				mainBody;
 	

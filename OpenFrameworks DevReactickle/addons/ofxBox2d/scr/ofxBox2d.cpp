@@ -19,7 +19,7 @@ void ofxBox2d::init() {
 	setFPS(60.0);
 	
 	//mouse grabbing
-	mouseJoint = NULL;
+	//mouseJoint = NULL;
 	ground	   = NULL;
 	
 	//debug drawer
@@ -197,7 +197,7 @@ void ofxBox2d::update() {
 
 // ------------------------------------------------------ 
 void ofxBox2d::draw() {
-	if(mouseJoint) {
+	/*if(mouseJoint) {
 		b2Body* mbody = mouseJoint->GetBody2();
 		b2Vec2 p1 = mbody->GetWorldPoint(mouseJoint->m_localAnchor);
 		b2Vec2 p2 = mouseJoint->m_target;
@@ -215,7 +215,7 @@ void ofxBox2d::draw() {
 		ofCircle(p1.x, p1.y, 2);
 		ofCircle(p2.x, p2.y, 5);
 		ofDisableAlphaBlending();
-	}
+	}*/
 	
 	//draw the ground
 	for(b2Shape* s=ground->GetShapeList(); s; s=s->GetNext()) {
