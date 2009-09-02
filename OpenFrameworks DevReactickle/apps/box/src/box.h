@@ -60,6 +60,5 @@ public:
 	
 	ofxBox2d						box2d;			  //	the box2d world
 	vector		<ofxBox2dRect>		boxes;			  //	defalut box2d rects
-	b2MouseJoint*					mouseJoint;
 };
 

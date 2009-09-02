@@ -43,14 +43,14 @@ void ofxBox2d::init() {
 	bWorldCreated = true;
 	
 }
-/*
+
 // ------------------------------------------------------ grab shapes 
-void ofxBox2d::mousePressed(ofMouseEventArgs &e) {
+void ofxBox2d::manipulatorPressed(float x, float y, int touchId) {
 	
 	if(enableGrabbing) {
-		b2Vec2 p(e.x/OFX_BOX2D_SCALE, e.y/OFX_BOX2D_SCALE);
+		b2Vec2 p(x/OFX_BOX2D_SCALE, y/OFX_BOX2D_SCALE);
 		
-		if (mouseJoint != NULL) {
+		if (mouseJoints[touchId] != NULL) {
 			return;
 		}
 		
@@ -91,24 +91,24 @@ void ofxBox2d::mousePressed(ofMouseEventArgs &e) {
 #else
 			md.maxForce = 1000.0f * body->GetMass();
 #endif
-			mouseJoint = (b2MouseJoint*)world->CreateJoint(&md);
+			mouseJoints[touchId] = (b2MouseJoint*)world->CreateJoint(&md);
 			body->WakeUp();
 			
 		}
 	}
 }
-void ofxBox2d::mouseDragged(ofMouseEventArgs &e) {
-	b2Vec2 p(e.x/OFX_BOX2D_SCALE, e.y/OFX_BOX2D_SCALE);
-	if (mouseJoint && enableGrabbing) mouseJoint->SetTarget(p);
+void ofxBox2d::manipulatorDragged(float x, float y, int touchId) {
+	b2Vec2 p(x/OFX_BOX2D_SCALE, y/OFX_BOX2D_SCALE);
+	if (mouseJoints[touchId] && enableGrabbing) mouseJoints[touchId]->SetTarget(p);
 }
-void ofxBox2d::mouseReleased(ofMouseEventArgs &e) {
+void ofxBox2d::manipulatorReleased(float x, float y, int touchId) {
 	
-	if(mouseJoint && enableGrabbing) {
-		world->DestroyJoint(mouseJoint);
-		mouseJoint = NULL;
+	if(mouseJoints[touchId] && enableGrabbing) {
+		world->DestroyJoint(mouseJoints[touchId]);
+		mouseJoints[touchId] = NULL;
 	}
 }
-*/
+
 // ------------------------------------------------------ set gravity
 void ofxBox2d::setGravity(float x, float y) {
 	world->SetGravity(b2Vec2(x, y));
@@ -136,7 +136,7 @@ void ofxBox2d::createFloor() {
 	sd.restitution = 0.0f;
 	sd.friction = 0.6;
 	float thick = 30/OFX_BOX2D_SCALE;
-
+	
 	//bottom
 	sd.SetAsBox((ofGetWidth()/OFX_BOX2D_SCALE)/2, thick, b2Vec2((ofGetWidth()/OFX_BOX2D_SCALE)/2, ofGetHeight()/OFX_BOX2D_SCALE), 0.0);
 	ground->CreateShape(&sd);
@@ -197,25 +197,28 @@ void ofxBox2d::update() {
 
 // ------------------------------------------------------ 
 void ofxBox2d::draw() {
-	/*if(mouseJoint) {
-		b2Body* mbody = mouseJoint->GetBody2();
-		b2Vec2 p1 = mbody->GetWorldPoint(mouseJoint->m_localAnchor);
-		b2Vec2 p2 = mouseJoint->m_target;
-		
-		p1 *= OFX_BOX2D_SCALE;
-		p2 *= OFX_BOX2D_SCALE;
-		
-		//draw a line from touched shape
-		ofEnableAlphaBlending();
-		ofSetLineWidth(2.0);
-		ofSetColor(200, 200, 200, 200);
-		ofLine(p1.x, p1.y, p2.x, p2.y);
-		ofNoFill();
-		ofSetLineWidth(1.0);
-		ofCircle(p1.x, p1.y, 2);
-		ofCircle(p2.x, p2.y, 5);
-		ofDisableAlphaBlending();
-	}*/
+	for(int i=0;i<OF_MAX_MANIPULATORS;i++) {
+		b2MouseJoint* mouseJoint=mouseJoints[i];
+		if (mouseJoint) {
+			b2Body* mbody = mouseJoint->GetBody2();
+			b2Vec2 p1 = mbody->GetWorldPoint(mouseJoint->m_localAnchor);
+			b2Vec2 p2 = mouseJoint->m_target;
+			
+			p1 *= OFX_BOX2D_SCALE;
+			p2 *= OFX_BOX2D_SCALE;
+			
+			//draw a line from touched shape
+			ofEnableAlphaBlending();
+			ofSetLineWidth(2.0);
+			ofSetColor(200, 200, 200, 200);
+			ofLine(p1.x, p1.y, p2.x, p2.y);
+			ofNoFill();
+			ofSetLineWidth(1.0);
+			ofCircle(p1.x, p1.y, 2);
+			ofCircle(p2.x, p2.y, 5);
+			ofDisableAlphaBlending();
+		}
+	}
 	
 	//draw the ground
 	for(b2Shape* s=ground->GetShapeList(); s; s=s->GetNext()) {

@@ -34,19 +34,21 @@ public:
 	b2BodyDef		bd;
 	
 	b2Body*				m_bomb;
-	//b2MouseJoint*		mouseJoint;
 	b2Body*				ground;
 	b2Body*				mainBody;
 	
-
+#define	OF_MAX_MANIPULATORS			5
+	b2MouseJoint* mouseJoints[OF_MAX_MANIPULATORS];
+	
+	
 	// ------------------------------------------------------ 
 	ofxBox2d();
 	void init();
 	void setFPS(float theFps) { fps = theFps; }
 	
-	//void mousePressed(ofMouseEventArgs &e);
-	//void mouseDragged(ofMouseEventArgs &e);
-	//void mouseReleased(ofMouseEventArgs &e);
+	void manipulatorPressed(float x, float y, int touchId);
+	void manipulatorDragged(float x, float y, int touchId);
+	void manipulatorReleased(float x, float y, int touchId);
 	
 	b2World* getWorld()		 { return world; }
 	int		 getBodyCount()  { return world->GetBodyCount(); }
