@@ -15,29 +15,29 @@ void box::setup(){
 	
 	float w=ofGetWidth();
 	float h=ofGetHeight();
-	int wc=6;
-	int hc=3;
+	int wc=3;
+	int hc=5;
 	float bw=w/(wc+2);
 	float bh=h/(hc+2);
+	int c=0;
 	for (int xi =0;xi<wc;xi++){
 		float x1=bw+xi*bw;
 		for (int yi =0;yi<hc;yi++){
-			if ((xi+yi)%2) {
+			if (c++<19) {
 				float y1=bh+yi*bh;
-				ofxBox2dRect rect;
-				rect.setPhysics(1.0, 0.4, 0.2);
-				rect.setup(box2d.getWorld(), x1+bw/2, y1+bh/2, bw/2, bh/2);
-				boxes.push_back(rect);
+				RegularPolygon poly(6,30);
+				poly.setPhysics(1.0, 0.4, 0.2);
+				poly.setup(box2d.getWorld(), x1+bw/2, y1+bh/2);
+				polygons.push_back(poly);
 			}
 		}
 	}
 	
-#ifdef TARGET_OS_IPHONE
+#if TARGET_OS_IPHONE==1
 	glEnableClientState( GL_VERTEX_ARRAY );  // this should be in OF somewhere.  
 	ofSetCircleResolution(8);
 	ofxMultiTouch.addListener(this);
 #else
-	
 	
 #endif
 }
@@ -50,15 +50,15 @@ void box::update(){
 
 //--------------------------------------------------------------
 void box::draw(){
-	for(int i=0; i<boxes.size(); i++) {
-		boxes[i].draw();
+	for(int i=0; i<polygons.size(); i++) {
+		polygons[i].draw();
 	}
 	box2d.draw();
 }
 void box::exit() {
 }
 
-#ifndef TARGET_OS_IPHONE
+#if !TARGET_OS_IPHONE
 //--------------------------------------------------------------
 void box::mouseMoved(int x, int y ){
 	

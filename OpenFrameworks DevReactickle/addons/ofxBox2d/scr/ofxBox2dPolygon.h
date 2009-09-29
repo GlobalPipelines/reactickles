@@ -20,7 +20,7 @@ public:
 	}
 	
 	//------------------------------------------------
-	void init(b2World * b2dworld, float x, float y) {
+	void setup(b2World * b2dworld, float x, float y) {
 		
 		if(b2dworld == NULL) {
 			ofLog(OF_LOG_NOTICE, "- must have a valid world -");
@@ -44,11 +44,11 @@ public:
 		
 		
 		
-		poly.density	  = 0.0;
-		poly.restitution  = 0.790;
-		poly.friction	  = 0.10;
+		poly.density	  = mass;
+		poly.restitution  = bounce;
+		poly.friction	  = friction;
 		
-		enableGravity(false);
+		//enableGravity(false);
 		
 		//Build Body for shape
 		b2BodyDef bodyDef;
@@ -58,12 +58,11 @@ public:
 		body->SetMassFromShapes();
 		
 		//set the filter data
-		b2FilterData data;
+		/*b2FilterData data;
 		data.categoryBits = 0x0003;
 		data.maskBits = 0x1;
 		data.groupIndex = -3;
-		setFilterData(data);	
-		
+		setFilterData(data);*/
 	//	printf("--- We built the shape \n---");
 	}
 	
@@ -266,37 +265,27 @@ public:
 	
 	//------------------------------------------------
 	void draw() {
-		
-		//wow this is a pain
-		b2Shape* s = body->GetShapeList();
-		const b2XForm& xf = body->GetXForm();
-		b2PolygonShape* poly = (b2PolygonShape*)s;
-		int count = poly->GetVertexCount();
-		const b2Vec2* localVertices = poly->GetVertices();
-		b2Assert(vertexCount <= b2_maxPolygonVertices);
-		b2Vec2 verts[b2_maxPolygonVertices];
-		for(int i=0; i<vertexCount; i++) {
-			verts[i] = b2Mul(xf, localVertices[i]);
-		}
-		
-		ofEnableAlphaBlending();
-		ofSetColor(10, 100, 255, 100);
+		const b2Vec2* verts=GetVertices();
+		ofSetColor(0, 0, 255);
 		ofFill();
 		ofBeginShape();
-		for(int i=0; i<count; i++) {
-			ofVertex(verts[i].x*OFX_BOX2D_SCALE, verts[i].y*OFX_BOX2D_SCALE);
-		}
-		ofEndShape();
-		
-		ofNoFill();
-		ofSetColor(20, 20, 20);
-		ofBeginShape();
-		for(int i=0; i<count; i++) {
+		for(int i=0; i<vertexCount; i++) {
 			ofVertex(verts[i].x*OFX_BOX2D_SCALE, verts[i].y*OFX_BOX2D_SCALE);
 		}
 		ofEndShape(true);
-		ofDisableAlphaBlending();
+		delete [] verts;
 	}
+	
+	const b2Vec2* GetVertices() {
+		b2Shape* s = body->GetShapeList();
+		const b2XForm& xf = body->GetXForm();
+		b2PolygonShape* poly = (b2PolygonShape*)s;
+		const b2Vec2* localVertices = poly->GetVertices();
+		b2Vec2* verts = new b2Vec2[vertexCount];
+		for(int i=0; i<vertexCount; i++) 
+			verts[i] = b2Mul(xf, localVertices[i]);
+		return verts;
+	}	
 };
 
 

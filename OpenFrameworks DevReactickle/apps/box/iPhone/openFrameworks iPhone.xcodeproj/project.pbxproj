@@ -10,6 +10,7 @@
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
+		641F92B4105040270023442B /* RegularPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 641F92B3105040270023442B /* RegularPolygon.cpp */; };
 		64EC5C9310109CBA0037BA0C /* box.mm in Sources */ = {isa = PBXBuildFile; fileRef = 64EC5C9210109CBA0037BA0C /* box.mm */; };
 		64EC5DE21010BDE50037BA0C /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64EC5D801010BDE50037BA0C /* b2BroadPhase.cpp */; };
 		64EC5DE31010BDE50037BA0C /* b2CollideCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64EC5D821010BDE50037BA0C /* b2CollideCircle.cpp */; };
@@ -89,6 +90,8 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* iPhone_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhone_Prefix.pch; sourceTree = "<group>"; };
+		641F92B2105040260023442B /* RegularPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularPolygon.h; sourceTree = "<group>"; };
+		641F92B3105040270023442B /* RegularPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RegularPolygon.cpp; sourceTree = "<group>"; };
 		64EC5C9110109CBA0037BA0C /* box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = box.h; sourceTree = "<group>"; };
 		64EC5C9210109CBA0037BA0C /* box.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = box.mm; sourceTree = "<group>"; };
 		64EC5CFC10109CDD0037BA0C /* ofMatrix3x3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofMatrix3x3.h; sourceTree = "<group>"; };
@@ -761,6 +764,8 @@
 		BB16F3A50F2B73B000518274 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				641F92B2105040260023442B /* RegularPolygon.h */,
+				641F92B3105040270023442B /* RegularPolygon.cpp */,
 				64EC5C9110109CBA0037BA0C /* box.h */,
 				64EC5C9210109CBA0037BA0C /* box.mm */,
 				BB16F3A80F2B73B000518274 /* main.cpp */,
@@ -1175,6 +1180,7 @@
 				64EC5E091010BDE50037BA0C /* b2PulleyJoint.cpp in Sources */,
 				64EC5E0A1010BDE50037BA0C /* b2RevoluteJoint.cpp in Sources */,
 				64EC5E0B1010BDE50037BA0C /* ofxBox2d.cpp in Sources */,
+				641F92B4105040270023442B /* RegularPolygon.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1239,7 +1245,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "15EA5C99-9D5B-4972-8DE4-84A3636A13CF";
-				SDKROOT = iphoneos2.2.1;
+				SDKROOT = iphoneos3.0;
 			};
 			name = Distribution;
 		};
@@ -1276,7 +1282,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "15EA5C99-9D5B-4972-8DE4-84A3636A13CF";
-				SDKROOT = iphoneos2.2;
+				SDKROOT = iphoneos3.0;
 			};
 			name = Debug;
 		};
@@ -1291,7 +1297,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "15EA5C99-9D5B-4972-8DE4-84A3636A13CF";
-				SDKROOT = iphoneos2.2.1;
+				SDKROOT = iphoneos3.0;
 			};
 			name = Release;
 		};

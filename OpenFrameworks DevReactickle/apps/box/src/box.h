@@ -2,13 +2,10 @@
 
 #include "ofMain.h"
 
-#ifdef TARGET_OS_IPHONE
-#include "ofxAccelerometer.h"
-#endif
-
 #include "ofxMultiTouch.h"
 
 #include "ofVectorMath.h"
+#include "RegularPolygon.h"
 #include "ofxBox2d.h"
 
 // ------------------------------------------------- a simple extended box2d circle
@@ -35,6 +32,7 @@ public:
 	}
 };
 
+
 class box : public ofSimpleApp , public ofxMultiTouchListener {
 	
 public:
@@ -45,7 +43,7 @@ public:
 	
 	void keyPressed(int key)  {}
 	void keyReleased(int key)  {}
-#ifndef TARGET_OS_IPHONE
+#if !TARGET_OS_IPHONE
 	void mouseMoved(int x, int y );
 	void mouseDragged(int x, int y, int button);
 	void mousePressed(int x, int y, int button);
@@ -59,6 +57,6 @@ public:
 	
 	
 	ofxBox2d						box2d;			  //	the box2d world
-	vector		<ofxBox2dRect>		boxes;			  //	defalut box2d rects
+	vector		<RegularPolygon>	polygons;			
 };
 

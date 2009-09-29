@@ -200,7 +200,7 @@ public:
 		dead  = true;
 		alive = false;
 	}
-	
+		
 	//------------------------------------------------
 	virtual void update() { }
 	virtual void draw() { }

@@ -22,6 +22,9 @@ void ofxBox2d::init() {
 	//mouseJoint = NULL;
 	ground	   = NULL;
 	
+	for(int i=0;i<OF_MAX_MANIPULATORS;i++)
+		mouseJoints[i]=NULL;
+	
 	//debug drawer
 	debugRender.setScale(scale);
 	debugRender.SetFlags(1);
@@ -210,12 +213,11 @@ void ofxBox2d::draw() {
 			//draw a line from touched shape
 			ofEnableAlphaBlending();
 			ofSetLineWidth(2.0);
-			ofSetColor(200, 200, 200, 200);
+			ofSetColor(128, 128, 128, 128);
 			ofLine(p1.x, p1.y, p2.x, p2.y);
-			ofNoFill();
-			ofSetLineWidth(1.0);
-			ofCircle(p1.x, p1.y, 2);
-			ofCircle(p2.x, p2.y, 5);
+			ofFill();
+			ofCircle(p1.x, p1.y, 3);
+			ofCircle(p2.x, p2.y, 3);
 			ofDisableAlphaBlending();
 		}
 	}
@@ -229,7 +231,7 @@ void ofxBox2d::draw() {
 		const b2Vec2* verts = poly->GetVertices();
 		ofEnableAlphaBlending();
 		ofFill();
-		ofSetColor(90, 90, 90, 100);
+		ofSetColor(128, 128, 128, 128);
 		ofBeginShape();
 		for(int j=0; j<count; j++) {
 			
