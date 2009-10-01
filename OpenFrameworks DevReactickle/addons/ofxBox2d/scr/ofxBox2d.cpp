@@ -122,6 +122,8 @@ void ofxBox2d::setGravity(ofPoint pt) {
 
 // ------------------------------------------------------ set bounds
 void ofxBox2d::setBounds(ofPoint lowBounds, ofPoint upBounds) {
+	worldAABB.lowerBound.Set(lowBounds.x,lowBounds.y);
+	worldAABB.upperBound.Set(upBounds.x,upBounds.y);
 }
 
 // ------------------------------------------------------ create bounds
@@ -223,24 +225,25 @@ void ofxBox2d::draw() {
 	}
 	
 	//draw the ground
-	for(b2Shape* s=ground->GetShapeList(); s; s=s->GetNext()) {
-		
-		const b2XForm& xf = ground->GetXForm();		
-		b2PolygonShape* poly = (b2PolygonShape*)s;
-		int count = poly->GetVertexCount();
-		const b2Vec2* verts = poly->GetVertices();
-		ofEnableAlphaBlending();
-		ofFill();
-		ofSetColor(128, 128, 128, 128);
-		ofBeginShape();
-		for(int j=0; j<count; j++) {
+	if (ground)
+		for(b2Shape* s=ground->GetShapeList(); s; s=s->GetNext()) {
 			
-			b2Vec2 pt = b2Mul(xf, verts[j]);
-			
-			ofVertex(pt.x*OFX_BOX2D_SCALE, pt.y*OFX_BOX2D_SCALE);
+			const b2XForm& xf = ground->GetXForm();		
+			b2PolygonShape* poly = (b2PolygonShape*)s;
+			int count = poly->GetVertexCount();
+			const b2Vec2* verts = poly->GetVertices();
+			ofEnableAlphaBlending();
+			ofFill();
+			ofSetColor(128, 128, 128, 128);
+			ofBeginShape();
+			for(int j=0; j<count; j++) {
+				
+				b2Vec2 pt = b2Mul(xf, verts[j]);
+				
+				ofVertex(pt.x*OFX_BOX2D_SCALE, pt.y*OFX_BOX2D_SCALE);
+			}
+			ofEndShape();
+			ofDisableAlphaBlending();
 		}
-		ofEndShape();
-		ofDisableAlphaBlending();
-	}
 }
 

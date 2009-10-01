@@ -32,7 +32,16 @@ struct b2MouseJointDef : public b2JointDef
 		maxForce = 0.0f;
 		frequencyHz = 5.0f;
 		dampingRatio = 0.7f;
-	}
+	};
+	
+	b2MouseJointDef(float _frequencyHz,float _dampingRatio)
+	{
+		type = e_mouseJoint;
+		target.Set(0.0f, 0.0f);
+		maxForce = 0.0f;
+		frequencyHz = _frequencyHz;
+		dampingRatio = _dampingRatio;
+	};
 
 	/// The initial world target point. This is assumed
 	/// to coincide with the body anchor initially.

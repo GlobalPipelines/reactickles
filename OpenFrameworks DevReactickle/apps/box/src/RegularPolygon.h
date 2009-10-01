@@ -23,6 +23,15 @@ public:
 			ofVertex(verts[i].x*OFX_BOX2D_SCALE, verts[i].y*OFX_BOX2D_SCALE);
 		}
 		ofEndShape(true);
+#if !TARGET_OS_IPHONE
+		ofNoFill();
+		ofSetLineWidth(1);
+		ofBeginShape();
+		for(int i=0; i<vertexCount; i++) {
+			ofVertex(verts[i].x*OFX_BOX2D_SCALE, verts[i].y*OFX_BOX2D_SCALE);
+		}
+		ofEndShape(true);
+#endif
 		delete [] verts;
 	};
 };

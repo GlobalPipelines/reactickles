@@ -8,31 +8,6 @@
 #include "RegularPolygon.h"
 #include "ofxBox2d.h"
 
-// ------------------------------------------------- a simple extended box2d circle
-class CustomParticle : public ofxBox2dCircle {
-	
-public:
-	float c;
-	CustomParticle() {
-		c = (int)ofRandom(30, 100);
-	}
-	ofColor color;
-	void draw() {
-		float radius = getRadius();
-		
-		glPushMatrix();
-		glTranslatef(getPosition().x, getPosition().y, 0);
-		
-		ofSetColor(c, c, c);
-		ofFill();
-		ofCircle(0, 0, radius);	
-		
-		glPopMatrix();
-		
-	}
-};
-
-
 class box : public ofSimpleApp , public ofxMultiTouchListener {
 	
 public:
