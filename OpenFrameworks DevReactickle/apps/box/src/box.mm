@@ -20,14 +20,14 @@ void box::setup(){
 	bd.position.Set(0, 0);
 	b2Body* ground = box2d.world->CreateBody(&bd);
 	
-	for (int c=0;c<30;c++) 
+	for (int c=0;c<40;c++) 
 	{
 		RegularPolygon poly(6,r);
 		poly.setPhysics(1.0, 0.0, 0.0);
 		poly.setup(box2d.getWorld(),ofRandom(-w, w*2)
 				   , ofRandomf()>0?ofRandom(h+r, h*2):ofRandom(-h, -r));
 		polygons.push_back(poly);
-		b2MouseJointDef md(0.1,0.1);
+		b2MouseJointDef md(0.1,0.0);
 		ofPoint op=poly.getB2DPosition();
 		b2Vec2 p(op.x,op.y);
 		md.body1 = ground;
