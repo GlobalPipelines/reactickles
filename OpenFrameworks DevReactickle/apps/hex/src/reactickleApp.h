@@ -18,7 +18,7 @@ public:
 };
 #endif
 
-class reactickle : public ofSimpleApp , public ofxMultiTouchListener {
+class reactickleApp : public ofSimpleApp , public ofxMultiTouchListener {
 	
 public:
 	void setup();

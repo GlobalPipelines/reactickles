@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		64669D1E0FD56A3200F898F8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64669D1C0FD56A3200F898F8 /* main.cpp */; };
 		64B040F010C5AAE000B0F4DF /* RegularPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64B040EE10C5AAE000B0F4DF /* RegularPolygon.cpp */; };
+		64BBFD0C10C5AE0F006D4CD1 /* reactickleApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 64BBFD0B10C5AE0F006D4CD1 /* reactickleApp.mm */; };
 		64DAE7131010DE550023878E /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64DAE6B11010DE550023878E /* b2BroadPhase.cpp */; };
 		64DAE7141010DE550023878E /* b2CollideCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64DAE6B31010DE550023878E /* b2CollideCircle.cpp */; };
 		64DAE7151010DE550023878E /* b2CollidePoly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64DAE6B41010DE550023878E /* b2CollidePoly.cpp */; };
@@ -51,7 +52,6 @@
 		64DAE73A1010DE550023878E /* b2PulleyJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64DAE7041010DE550023878E /* b2PulleyJoint.cpp */; };
 		64DAE73B1010DE550023878E /* b2RevoluteJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64DAE7061010DE550023878E /* b2RevoluteJoint.cpp */; };
 		64DAE73C1010DE550023878E /* ofxBox2d.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64DAE7081010DE550023878E /* ofxBox2d.cpp */; };
-		64EB81C510C5A8CC005975F6 /* reactickle.mm in Sources */ = {isa = PBXBuildFile; fileRef = 64EB81C410C5A8CC005975F6 /* reactickle.mm */; };
 		E446644B0F5B1CFD005D0BF0 /* ofAppGlutWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E446641A0F5B1CFD005D0BF0 /* ofAppGlutWindow.cpp */; };
 		E446644C0F5B1CFD005D0BF0 /* ofAppRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E446641C0F5B1CFD005D0BF0 /* ofAppRunner.cpp */; };
 		E446644D0F5B1CFD005D0BF0 /* ofArduino.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44664200F5B1CFD005D0BF0 /* ofArduino.cpp */; };
@@ -97,6 +97,8 @@
 		64669D1C0FD56A3200F898F8 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		64B040EE10C5AAE000B0F4DF /* RegularPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RegularPolygon.cpp; sourceTree = "<group>"; };
 		64B040EF10C5AAE000B0F4DF /* RegularPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularPolygon.h; sourceTree = "<group>"; };
+		64BBFD0A10C5AE0F006D4CD1 /* reactickleApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reactickleApp.h; sourceTree = "<group>"; };
+		64BBFD0B10C5AE0F006D4CD1 /* reactickleApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = reactickleApp.mm; sourceTree = "<group>"; };
 		64DAE6A41010DE550023878E /* ofMatrix3x3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofMatrix3x3.h; sourceTree = "<group>"; };
 		64DAE6A51010DE550023878E /* ofVec2f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofVec2f.h; sourceTree = "<group>"; };
 		64DAE6A61010DE550023878E /* ofVec3f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofVec3f.h; sourceTree = "<group>"; };
@@ -195,8 +197,6 @@
 		64DAE7101010DE550023878E /* ofxBox2dRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dRender.h; sourceTree = "<group>"; };
 		64DAE7111010DE550023878E /* ofxBox2dSoftBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dSoftBody.h; sourceTree = "<group>"; };
 		64DAE7121010DE550023878E /* ofxBox2dUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxBox2dUtils.h; sourceTree = "<group>"; };
-		64EB81C310C5A8CC005975F6 /* reactickle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reactickle.h; sourceTree = "<group>"; };
-		64EB81C410C5A8CC005975F6 /* reactickle.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = reactickle.mm; sourceTree = "<group>"; };
 		E44664190F5B1CFD005D0BF0 /* ofAppBaseWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofAppBaseWindow.h; path = ../../../libs/openFrameworks/app/ofAppBaseWindow.h; sourceTree = SOURCE_ROOT; };
 		E446641A0F5B1CFD005D0BF0 /* ofAppGlutWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofAppGlutWindow.cpp; path = ../../../libs/openFrameworks/app/ofAppGlutWindow.cpp; sourceTree = SOURCE_ROOT; };
 		E446641B0F5B1CFD005D0BF0 /* ofAppGlutWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofAppGlutWindow.h; path = ../../../libs/openFrameworks/app/ofAppGlutWindow.h; sourceTree = SOURCE_ROOT; };
@@ -1103,10 +1103,10 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				64BBFD0A10C5AE0F006D4CD1 /* reactickleApp.h */,
+				64BBFD0B10C5AE0F006D4CD1 /* reactickleApp.mm */,
 				64B040EE10C5AAE000B0F4DF /* RegularPolygon.cpp */,
 				64B040EF10C5AAE000B0F4DF /* RegularPolygon.h */,
-				64EB81C310C5A8CC005975F6 /* reactickle.h */,
-				64EB81C410C5A8CC005975F6 /* reactickle.mm */,
 				64669D1C0FD56A3200F898F8 /* main.cpp */,
 			);
 			name = src;
@@ -1245,8 +1245,8 @@
 				64DAE73A1010DE550023878E /* b2PulleyJoint.cpp in Sources */,
 				64DAE73B1010DE550023878E /* b2RevoluteJoint.cpp in Sources */,
 				64DAE73C1010DE550023878E /* ofxBox2d.cpp in Sources */,
-				64EB81C510C5A8CC005975F6 /* reactickle.mm in Sources */,
 				64B040F010C5AAE000B0F4DF /* RegularPolygon.cpp in Sources */,
+				64BBFD0C10C5AE0F006D4CD1 /* reactickleApp.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
