@@ -1,45 +1,24 @@
 #pragma once
 
 #include "ofMain.h"
+#include "ofVectorMath.h"
+#include "RegularPolygon.h"
+#include "ofxBox2d.h"
 
 #if TARGET_OS_IPHONE
-#include "ofxAccelerometer.h"
 #include "ofxMultiTouch.h"
 #else
 class ofxMultiTouchListener {
 public:
 	ofxMultiTouchListener(){};
 };
+class ofxMultiTouchCustomData {
+public:
+	ofxMultiTouchCustomData(){};
+};
 #endif
 
-#include "ofVectorMath.h"
-#include "ofxBox2d.h"
-
-// ------------------------------------------------- a simple extended box2d circle
-class CustomParticle : public ofxBox2dCircle {
-	
-public:
-	float c;
-	CustomParticle() {
-		c = (int)ofRandom(30, 100);
-	}
-	ofColor color;
-	void draw() {
-		float radius = getRadius();
-		
-		glPushMatrix();
-		glTranslatef(getPosition().x, getPosition().y, 0);
-		
-		ofSetColor(c, c, c);
-		ofFill();
-		ofCircle(0, 0, radius);	
-		
-		glPopMatrix();
-		
-	}
-};
-
-class hex : public ofSimpleApp , public ofxMultiTouchListener {
+class reactickle : public ofSimpleApp , public ofxMultiTouchListener {
 	
 public:
 	void setup();
@@ -55,14 +34,14 @@ public:
 	void mousePressed(int x, int y, int button);
 	void mouseReleased();
 	void mouseReleased(int x, int y, int button );
-#else
+#endif
 	void touchDown(float x, float y, int touchId, ofxMultiTouchCustomData *data = NULL);
 	void touchMoved(float x, float y, int touchId, ofxMultiTouchCustomData *data = NULL);
 	void touchUp(float x, float y, int touchId, ofxMultiTouchCustomData *data = NULL);
 	void touchDoubleTap(float x, float y, int touchId, ofxMultiTouchCustomData *data = NULL);
-#endif
+	
 	
 	ofxBox2d						box2d;			  //	the box2d world
-	vector		<ofxBox2dRect>		boxes;			  //	defalut box2d rects
+	vector		<RegularPolygon>	polygons;			
 };
 
