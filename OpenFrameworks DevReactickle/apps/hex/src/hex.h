@@ -2,12 +2,10 @@
 
 #include "ofMain.h"
 
-#ifdef TARGET_OS_IPHONE
+#if TARGET_OS_IPHONE
 #include "ofxAccelerometer.h"
 #include "ofxMultiTouch.h"
-#endif
-
-#ifndef TARGET_OS_IPHONE
+#else
 class ofxMultiTouchListener {
 public:
 	ofxMultiTouchListener(){};
@@ -41,7 +39,7 @@ public:
 	}
 };
 
-class box : public ofSimpleApp , public ofxMultiTouchListener {
+class hex : public ofSimpleApp , public ofxMultiTouchListener {
 	
 public:
 	void setup();
@@ -51,7 +49,7 @@ public:
 	
 	void keyPressed(int key)  {}
 	void keyReleased(int key)  {}
-#ifndef TARGET_OS_IPHONE
+#if !TARGET_OS_IPHONE
 	void mouseMoved(int x, int y );
 	void mouseDragged(int x, int y, int button);
 	void mousePressed(int x, int y, int button);

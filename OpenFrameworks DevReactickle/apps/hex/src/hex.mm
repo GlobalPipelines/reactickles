@@ -1,7 +1,7 @@
-#include "box.h"
+#include "hex.h"
 
 //--------------------------------------------------------------
-void box::setup(){	
+void hex::setup(){	
 	ofBackground(0,0,0);
 	ofSetBackgroundAuto(true);
 	ofDisableAlphaBlending();
@@ -30,7 +30,7 @@ void box::setup(){
 		}
 	}
 	
-#ifdef TARGET_OS_IPHONE
+#if TARGET_OS_IPHONE
 	glEnableClientState( GL_VERTEX_ARRAY );  // this should be in OF somewhere.  
 	ofSetCircleResolution(8);
 	ofxMultiTouch.addListener(this);
@@ -42,62 +42,62 @@ void box::setup(){
 
 
 //--------------------------------------------------------------
-void box::update(){
+void hex::update(){
 	box2d.update();
 }
 
 //--------------------------------------------------------------
-void box::draw(){
+void hex::draw(){
 	for(int i=0; i<boxes.size(); i++) {
 		boxes[i].draw();
 	}
 	//box2d.draw();
 }
-void box::exit() {
+void hex::exit() {
 }
 
-#ifndef TARGET_OS_IPHONE
+#if !TARGET_OS_IPHONE
 //--------------------------------------------------------------
-void box::mouseMoved(int x, int y ){
+void hex::mouseMoved(int x, int y ){
 	
 }
 
 //--------------------------------------------------------------
-void box::mouseDragged(int x, int y, int button){
+void hex::mouseDragged(int x, int y, int button){
 	
 }
 
 
 //--------------------------------------------------------------
-void box::mousePressed(int x, int y, int button){
+void hex::mousePressed(int x, int y, int button){
 	
 }
 
 //--------------------------------------------------------------
-void box::mouseReleased(){
+void hex::mouseReleased(){
 }
 
 //--------------------------------------------------------------
-void box::mouseReleased(int x, int y, int button){
+void hex::mouseReleased(int x, int y, int button){
 	
 }
 
 #else
 
 //--------------------------------------------------------------
-void box::touchDown(float x, float y, int touchId, ofxMultiTouchCustomData *data){
+void hex::touchDown(float x, float y, int touchId, ofxMultiTouchCustomData *data){
 	
 }
 //--------------------------------------------------------------
-void box::touchMoved(float x, float y, int touchId, ofxMultiTouchCustomData *data){
+void hex::touchMoved(float x, float y, int touchId, ofxMultiTouchCustomData *data){
 	
 }
 //--------------------------------------------------------------
-void box::touchUp(float x, float y, int touchId, ofxMultiTouchCustomData *data){
+void hex::touchUp(float x, float y, int touchId, ofxMultiTouchCustomData *data){
 	
 }
 //--------------------------------------------------------------
-void box::touchDoubleTap(float x, float y, int touchId, ofxMultiTouchCustomData *data){
+void hex::touchDoubleTap(float x, float y, int touchId, ofxMultiTouchCustomData *data){
 	
 }
 #endif

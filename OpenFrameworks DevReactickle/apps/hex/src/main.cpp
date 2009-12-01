@@ -1,5 +1,5 @@
 #include "ofMain.h"
-#include "box.h"
+#include "hex.h"
 
 int main(int argc, char *argv[]) {
 	int w=320;
@@ -11,5 +11,5 @@ int main(int argc, char *argv[]) {
 	if (mode==OF_GAME_MODE)
 		w=h=9999;                       // attempts to use highest available resolution on desktop
 	ofSetupOpenGL(w,h, mode);			// <-------- setup the GL context
-	ofRunApp(new box);
+	ofRunApp(new hex);
 }
