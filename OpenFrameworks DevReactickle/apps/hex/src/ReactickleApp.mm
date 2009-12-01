@@ -1,7 +1,7 @@
 #include "reactickleApp.h"
 
 //--------------------------------------------------------------
-void reactickleApp::setup(){	
+void ReactickleApp::setup(){	
 	float w=ofGetWidth();
 	float h=ofGetHeight();
 	ofBackground(0,0,0);
@@ -49,64 +49,64 @@ void reactickleApp::setup(){
 
 
 //--------------------------------------------------------------
-void reactickleApp::update(){
+void ReactickleApp::update(){
 	box2d.update();
 }
 
 //--------------------------------------------------------------
-void reactickleApp::draw(){
+void ReactickleApp::draw(){
 	for(int i=0; i<polygons.size(); i++) {
 		polygons[i].draw();
 	}
 	//box2d.draw();
 }
 
-void reactickleApp::exit() {
+void ReactickleApp::exit() {
 }
 
 #if !TARGET_OS_IPHONE
 //--------------------------------------------------------------
-void reactickleApp::mouseMoved(int x, int y ){
+void ReactickleApp::mouseMoved(int x, int y ){
 	
 }
 
 //--------------------------------------------------------------
-void reactickleApp::mouseDragged(int x, int y, int button){
+void ReactickleApp::mouseDragged(int x, int y, int button){
 	touchMoved(x,y,0);
 }
 
 
 //--------------------------------------------------------------
-void reactickleApp::mousePressed(int x, int y, int button){
+void ReactickleApp::mousePressed(int x, int y, int button){
 	touchDown(x,y,0);
 }
 
 //--------------------------------------------------------------
-void reactickleApp::mouseReleased(){
+void ReactickleApp::mouseReleased(){
 	touchUp(0,0,0);
 }
 
 //--------------------------------------------------------------
-void reactickleApp::mouseReleased(int x, int y, int button){
+void ReactickleApp::mouseReleased(int x, int y, int button){
 	touchUp(x,y,0);
 }
 
 #endif
 
 //--------------------------------------------------------------
-void reactickleApp::touchDown(float x, float y, int touchId, ofxMultiTouchCustomData *data){
+void ReactickleApp::touchDown(float x, float y, int touchId, ofxMultiTouchCustomData *data){
 	box2d.manipulatorPressed(x,y,touchId);
 }
 //--------------------------------------------------------------
-void reactickleApp::touchMoved(float x, float y, int touchId, ofxMultiTouchCustomData *data){
+void ReactickleApp::touchMoved(float x, float y, int touchId, ofxMultiTouchCustomData *data){
 	box2d.manipulatorDragged(x,y,touchId);
 }
 //--------------------------------------------------------------
-void reactickleApp::touchUp(float x, float y, int touchId, ofxMultiTouchCustomData *data){
+void ReactickleApp::touchUp(float x, float y, int touchId, ofxMultiTouchCustomData *data){
 	box2d.manipulatorReleased(x,y,touchId);
 }
 //--------------------------------------------------------------
-void reactickleApp::touchDoubleTap(float x, float y, int touchId, ofxMultiTouchCustomData *data){
+void ReactickleApp::touchDoubleTap(float x, float y, int touchId, ofxMultiTouchCustomData *data){
 	
 }
 

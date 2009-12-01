@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		64669D1E0FD56A3200F898F8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64669D1C0FD56A3200F898F8 /* main.cpp */; };
 		64B040F010C5AAE000B0F4DF /* RegularPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64B040EE10C5AAE000B0F4DF /* RegularPolygon.cpp */; };
-		64BBFD0C10C5AE0F006D4CD1 /* reactickleApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 64BBFD0B10C5AE0F006D4CD1 /* reactickleApp.mm */; };
+		64BBFD0C10C5AE0F006D4CD1 /* ReactickleApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 64BBFD0B10C5AE0F006D4CD1 /* ReactickleApp.mm */; };
 		64DAE7131010DE550023878E /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64DAE6B11010DE550023878E /* b2BroadPhase.cpp */; };
 		64DAE7141010DE550023878E /* b2CollideCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64DAE6B31010DE550023878E /* b2CollideCircle.cpp */; };
 		64DAE7151010DE550023878E /* b2CollidePoly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 64DAE6B41010DE550023878E /* b2CollidePoly.cpp */; };
@@ -97,8 +97,8 @@
 		64669D1C0FD56A3200F898F8 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		64B040EE10C5AAE000B0F4DF /* RegularPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RegularPolygon.cpp; sourceTree = "<group>"; };
 		64B040EF10C5AAE000B0F4DF /* RegularPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularPolygon.h; sourceTree = "<group>"; };
-		64BBFD0A10C5AE0F006D4CD1 /* reactickleApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reactickleApp.h; sourceTree = "<group>"; };
-		64BBFD0B10C5AE0F006D4CD1 /* reactickleApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = reactickleApp.mm; sourceTree = "<group>"; };
+		64BBFD0A10C5AE0F006D4CD1 /* ReactickleApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactickleApp.h; sourceTree = "<group>"; };
+		64BBFD0B10C5AE0F006D4CD1 /* ReactickleApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ReactickleApp.mm; sourceTree = "<group>"; };
 		64DAE6A41010DE550023878E /* ofMatrix3x3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofMatrix3x3.h; sourceTree = "<group>"; };
 		64DAE6A51010DE550023878E /* ofVec2f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofVec2f.h; sourceTree = "<group>"; };
 		64DAE6A61010DE550023878E /* ofVec3f.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofVec3f.h; sourceTree = "<group>"; };
@@ -361,7 +361,7 @@
 		E45BEE780E8CC911009D7055 /* libPocoNet.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoNet.a; path = ../../../libs/poco/lib/libPocoNet.a; sourceTree = SOURCE_ROOT; };
 		E45BEE790E8CC911009D7055 /* libPocoUtil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoUtil.a; path = ../../../libs/poco/lib/libPocoUtil.a; sourceTree = SOURCE_ROOT; };
 		E45BEE7A0E8CC911009D7055 /* libPocoXML.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPocoXML.a; path = ../../../libs/poco/lib/libPocoXML.a; sourceTree = SOURCE_ROOT; };
-		E4B69B5B0A3A1756003C02F2 /* openFrameworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = openFrameworks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69B5B0A3A1756003C02F2 /* hex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1091,7 +1091,7 @@
 		E4B69B4A0A3A1720003C02F2 = {
 			isa = PBXGroup;
 			children = (
-				E4B69B5B0A3A1756003C02F2 /* openFrameworks.app */,
+				E4B69B5B0A3A1756003C02F2 /* hex.app */,
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
 				E4B69E1C0A3A1BDC003C02F2 /* src */,
 				E44664170F5B1CFD005D0BF0 /* openFrameworks */,
@@ -1103,8 +1103,8 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				64BBFD0A10C5AE0F006D4CD1 /* reactickleApp.h */,
-				64BBFD0B10C5AE0F006D4CD1 /* reactickleApp.mm */,
+				64BBFD0A10C5AE0F006D4CD1 /* ReactickleApp.h */,
+				64BBFD0B10C5AE0F006D4CD1 /* ReactickleApp.mm */,
 				64B040EE10C5AAE000B0F4DF /* RegularPolygon.cpp */,
 				64B040EF10C5AAE000B0F4DF /* RegularPolygon.h */,
 				64669D1C0FD56A3200F898F8 /* main.cpp */,
@@ -1131,7 +1131,7 @@
 			);
 			name = openFrameworks;
 			productName = myOFApp;
-			productReference = E4B69B5B0A3A1756003C02F2 /* openFrameworks.app */;
+			productReference = E4B69B5B0A3A1756003C02F2 /* hex.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1246,7 +1246,7 @@
 				64DAE73B1010DE550023878E /* b2RevoluteJoint.cpp in Sources */,
 				64DAE73C1010DE550023878E /* ofxBox2d.cpp in Sources */,
 				64B040F010C5AAE000B0F4DF /* RegularPolygon.cpp in Sources */,
-				64BBFD0C10C5AE0F006D4CD1 /* reactickleApp.mm in Sources */,
+				64BBFD0C10C5AE0F006D4CD1 /* ReactickleApp.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1341,7 +1341,7 @@
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5 = "\"$(SRCROOT)/../../../libs/poco/lib\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6 = "\"$(SRCROOT)/../../../libs/rtAudio/lib\"";
 				PREBINDING = NO;
-				PRODUCT_NAME = openFrameworksDebug;
+				PRODUCT_NAME = hexDebug;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};
@@ -1380,7 +1380,7 @@
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5 = "\"$(SRCROOT)/../../../libs/poco/lib\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6 = "\"$(SRCROOT)/../../../libs/rtAudio/lib\"";
 				PREBINDING = NO;
-				PRODUCT_NAME = openFrameworks;
+				PRODUCT_NAME = hex;
 				WRAPPER_EXTENSION = app;
 				ZERO_LINK = NO;
 			};

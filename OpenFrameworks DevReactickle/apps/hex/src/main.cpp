@@ -1,5 +1,5 @@
 #include "ofMain.h"
-#include "reactickleApp.h"
+#include "ReactickleApp.h"
 
 int main(int argc, char *argv[]) {
 	int w=320;
@@ -11,5 +11,5 @@ int main(int argc, char *argv[]) {
 	h = CGRectGetHeight(thisMonitorArea);
 #endif
 	ofSetupOpenGL(w,h, mode);
-	ofRunApp(new reactickleApp);
+	ofRunApp(new ReactickleApp);
 }

@@ -1,21 +1,21 @@
-#include "flo.h"
+#include "ReactickleApp.h"
 
 //--------------------------------------------------------------
-void flo::setup(){	
+void ReactickleApp::setup(){	
 	ofBackground(0,0,0);
 	ofSetBackgroundAuto(true);
 	ofDisableAlphaBlending();
 	int w=ofGetScreenWidth();
 	int h=ofGetScreenHeight();
 	float diagonal=sqrt(w*w+h*h);
-#ifdef TARGET_OS_IPHONE
+#if TARGET_OS_IPHONE
 	glEnableClientState( GL_VERTEX_ARRAY );  // this should be in OF somewhere.  
 	ofSetCircleResolution(8);
 	ofxMultiTouch.addListener(this);
 	outerRadius=diagonal/20;
 	maxPoints=400;
 #else
-	outerRadius=diagonal/30;
+	outerRadius=diagonal/30;	
 	maxPoints=4000;
 #endif
 	innerRadius=outerRadius*.75;
@@ -28,7 +28,7 @@ void flo::setup(){
 
 
 //--------------------------------------------------------------
-void flo::update(){
+void ReactickleApp::update(){
 	if (points.size()>0) {
 		vector<timedPoint>::iterator it= points.begin();
 		float time=ofGetElapsedTimef();
@@ -41,7 +41,7 @@ void flo::update(){
 }
 
 //--------------------------------------------------------------
-void flo::draw(){
+void ReactickleApp::draw(){
 	float time=ofGetElapsedTimef();
 	int s=points.size();
 	int offset=maxPoints-s;
@@ -57,7 +57,7 @@ void flo::draw(){
 		ofCircle(points[i].x, points[i].y, radii[i]*innerRadius*.75);
 }
 
-void flo::addPointAt(int x,int y)
+void ReactickleApp::addPointAt(int x,int y)
 {
 	points.push_back( timedPoint(x,y,ofGetElapsedTimef()));
 	if (points.size()>=maxPoints) {
@@ -66,50 +66,50 @@ void flo::addPointAt(int x,int y)
 	}
 }
 
-void flo::exit() {
+void ReactickleApp::exit() {
 }
 
-#ifndef TARGET_OS_IPHONE
+#if !TARGET_OS_IPHONE
 //--------------------------------------------------------------
-void flo::mouseMoved(int x, int y ){
+void ReactickleApp::mouseMoved(int x, int y ){
 	
 }
 
 //--------------------------------------------------------------
-void flo::mouseDragged(int x, int y, int button){
+void ReactickleApp::mouseDragged(int x, int y, int button){
 	touchMoved(x,y,0);
 }
 
 
 //--------------------------------------------------------------
-void flo::mousePressed(int x, int y, int button){
+void ReactickleApp::mousePressed(int x, int y, int button){
 	touchDown(x,y,0);
 }
 
 //--------------------------------------------------------------
-void flo::mouseReleased(){
+void ReactickleApp::mouseReleased(){
 }
 
 //--------------------------------------------------------------
-void flo::mouseReleased(int x, int y, int button){
+void ReactickleApp::mouseReleased(int x, int y, int button){
 	
 }
 #endif
 
 //--------------------------------------------------------------
-void flo::touchDown(float x, float y, int touchId, ofxMultiTouchCustomData *data){
+void ReactickleApp::touchDown(float x, float y, int touchId, ofxMultiTouchCustomData *data){
 	addPointAt(x,y);
 }
 //--------------------------------------------------------------
-void flo::touchMoved(float x, float y, int touchId, ofxMultiTouchCustomData *data){
+void ReactickleApp::touchMoved(float x, float y, int touchId, ofxMultiTouchCustomData *data){
 	addPointAt(x,y);
 }
 //--------------------------------------------------------------
-void flo::touchUp(float x, float y, int touchId, ofxMultiTouchCustomData *data){
+void ReactickleApp::touchUp(float x, float y, int touchId, ofxMultiTouchCustomData *data){
 	
 }
 //--------------------------------------------------------------
-void flo::touchDoubleTap(float x, float y, int touchId, ofxMultiTouchCustomData *data){
+void ReactickleApp::touchDoubleTap(float x, float y, int touchId, ofxMultiTouchCustomData *data){
 	points.clear();
 }
 

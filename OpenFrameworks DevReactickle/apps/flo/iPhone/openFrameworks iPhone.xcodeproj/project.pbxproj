@@ -11,6 +11,7 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765FC0DF74451002DB57D /* CoreGraphics.framework */; };
 		64A772D21016446800C8D440 /* readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 64A772D11016446700C8D440 /* readme.txt */; };
+		64D34A5810C5C16C0020E4D9 /* ReactickleApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 64D34A5710C5C16C0020E4D9 /* ReactickleApp.mm */; };
 		BB16E9C90F2B1E6900518274 /* ofAppRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB16E9990F2B1E6900518274 /* ofAppRunner.cpp */; };
 		BB16E9D40F2B1E6900518274 /* ofMath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB16E9B90F2B1E6900518274 /* ofMath.cpp */; };
 		BB16E9D50F2B1E6900518274 /* ofUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB16E9BC0F2B1E6900518274 /* ofUtils.cpp */; };
@@ -29,7 +30,6 @@
 		BB4B3E550F7AFE100030C0C6 /* ofxiPhoneUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB4B3E260F7AFE100030C0C6 /* ofxiPhoneUtils.mm */; };
 		BB4B3E580F7AFE100030C0C6 /* ofxMultiTouch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB4B3E2B0F7AFE100030C0C6 /* ofxMultiTouch.cpp */; };
 		BB4B3E5B0F7AFE100030C0C6 /* ofxAccelerometer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB4B3E320F7AFE100030C0C6 /* ofxAccelerometer.cpp */; };
-		BB73D3DB0F4B08B60092FC06 /* flo.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB73D3DA0F4B08B60092FC06 /* flo.mm */; };
 		BB91E5520F4085C900AD1FB1 /* ofTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BB16E9AD0F2B1E6900518274 /* ofTexture.cpp */; };
 		BBD1C2780F39143F007FCFB3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BBD1C2760F39143F007FCFB3 /* Default.png */; };
 		BBD1C2790F39143F007FCFB3 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BBD1C2770F39143F007FCFB3 /* Icon.png */; };
@@ -49,6 +49,8 @@
 		288765FC0DF74451002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* iPhone_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iPhone_Prefix.pch; sourceTree = "<group>"; };
 		64A772D11016446700C8D440 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = readme.txt; path = ../readme.txt; sourceTree = SOURCE_ROOT; };
+		64D34A5610C5C16C0020E4D9 /* ReactickleApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactickleApp.h; sourceTree = "<group>"; };
+		64D34A5710C5C16C0020E4D9 /* ReactickleApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ReactickleApp.mm; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		BB16E9960F2B1E6900518274 /* ofAppBaseWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofAppBaseWindow.h; sourceTree = "<group>"; };
 		BB16E9970F2B1E6900518274 /* ofAppGlutWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofAppGlutWindow.cpp; sourceTree = "<group>"; };
@@ -97,7 +99,6 @@
 		BB16EBD10F2B2A9500518274 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BB16EBD80F2B2AB500518274 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		BB16F3A80F2B73B000518274 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		BB16F3AA0F2B73B000518274 /* flo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flo.h; sourceTree = "<group>"; };
 		BB4B3DE40F7AFE100030C0C6 /* changelog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = changelog.txt; sourceTree = "<group>"; };
 		BB4B3E160F7AFE100030C0C6 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		BB4B3E170F7AFE100030C0C6 /* ofxiPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxiPhone.h; sourceTree = "<group>"; };
@@ -124,7 +125,6 @@
 		BB4B3E300F7AFE100030C0C6 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		BB4B3E320F7AFE100030C0C6 /* ofxAccelerometer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxAccelerometer.cpp; sourceTree = "<group>"; };
 		BB4B3E330F7AFE100030C0C6 /* ofxAccelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxAccelerometer.h; sourceTree = "<group>"; };
-		BB73D3DA0F4B08B60092FC06 /* flo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = flo.mm; sourceTree = "<group>"; };
 		BBD1C2760F39143F007FCFB3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		BBD1C2770F39143F007FCFB3 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		BBE5E9560F497C3100F28951 /* ftconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ftconfig.h; sourceTree = "<group>"; };
@@ -412,8 +412,8 @@
 		BB16F3A50F2B73B000518274 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				BB16F3AA0F2B73B000518274 /* flo.h */,
-				BB73D3DA0F4B08B60092FC06 /* flo.mm */,
+				64D34A5610C5C16C0020E4D9 /* ReactickleApp.h */,
+				64D34A5710C5C16C0020E4D9 /* ReactickleApp.mm */,
 				BB16F3A80F2B73B000518274 /* main.cpp */,
 			);
 			includeInIndex = 1;
@@ -773,7 +773,6 @@
 				BB91E5520F4085C900AD1FB1 /* ofTexture.cpp in Sources */,
 				BBE5E9F90F497D9200F28951 /* ofImage.cpp in Sources */,
 				BBE5E9FA0F497D9500F28951 /* ofTrueTypeFont.cpp in Sources */,
-				BB73D3DB0F4B08B60092FC06 /* flo.mm in Sources */,
 				BB4B3E4D0F7AFE100030C0C6 /* EAGLView.mm in Sources */,
 				BB4B3E4E0F7AFE100030C0C6 /* iPhoneAppDelegate.mm in Sources */,
 				BB4B3E4F0F7AFE100030C0C6 /* iPhoneGlobals.mm in Sources */,
@@ -785,6 +784,7 @@
 				BB4B3E550F7AFE100030C0C6 /* ofxiPhoneUtils.mm in Sources */,
 				BB4B3E580F7AFE100030C0C6 /* ofxMultiTouch.cpp in Sources */,
 				BB4B3E5B0F7AFE100030C0C6 /* ofxAccelerometer.cpp in Sources */,
+				64D34A5810C5C16C0020E4D9 /* ReactickleApp.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -848,7 +848,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "D298778A-29D8-45CC-8DC9-9B762AAF109C";
-				SDKROOT = iphoneos2.2.1;
+				SDKROOT = iphoneos3.1;
 			};
 			name = Distribution;
 		};
@@ -885,7 +885,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "D298778A-29D8-45CC-8DC9-9B762AAF109C";
-				SDKROOT = iphoneos2.2;
+				SDKROOT = iphoneos3.1;
 			};
 			name = Debug;
 		};
@@ -899,7 +899,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				PROVISIONING_PROFILE = "D298778A-29D8-45CC-8DC9-9B762AAF109C";
-				SDKROOT = iphoneos2.2.1;
+				SDKROOT = iphoneos3.1;
 			};
 			name = Release;
 		};

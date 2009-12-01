@@ -2,11 +2,19 @@
 
 #include "ofMain.h"
 
-#ifdef TARGET_OS_IPHONE
-#include "ofxAccelerometer.h"
+#if TARGET_OS_IPHONE
+#include "ofxMultiTouch.h"
+#else
+class ofxMultiTouchListener {
+public:
+	ofxMultiTouchListener(){};
+};
+class ofxMultiTouchCustomData {
+public:
+	ofxMultiTouchCustomData(){};
+};
 #endif
 
-#include "ofxMultiTouch.h"
 
 class timedPoint{
 public:
@@ -16,7 +24,7 @@ public:
 	float t;
 };
 
-class flo : public ofSimpleApp , public ofxMultiTouchListener {
+class ReactickleApp : public ofSimpleApp , public ofxMultiTouchListener {
 	
 public:
 	void setup();
@@ -26,14 +34,13 @@ public:
 	
 	void keyPressed(int key) {}
 	void keyReleased(int key)  {}
-#ifndef TARGET_OS_IPHONE
+#if !TARGET_OS_IPHONE
 	void mouseMoved(int x, int y );
 	void mouseDragged(int x, int y, int button);
 	void mousePressed(int x, int y, int button);
 	void mouseReleased();
 	void mouseReleased(int x, int y, int button );
 #endif
-	
 	void touchDown(float x, float y, int touchId, ofxMultiTouchCustomData *data = NULL);
 	void touchMoved(float x, float y, int touchId, ofxMultiTouchCustomData *data = NULL);
 	void touchUp(float x, float y, int touchId, ofxMultiTouchCustomData *data = NULL);
